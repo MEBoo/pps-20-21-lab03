@@ -29,6 +29,11 @@ class AllTests {
     //1.c
     assertEquals(Cons (11, Cons(21, Cons (31, Nil ()))), map( lst )(v => v+1) )
 
+    //1.d
+    assertEquals(Cons(20, Cons (30, Nil ())), filter[Int]( lst )(_ >=20) )
+    assertEquals(Cons (30, Nil ()), filter[Int]( lst )(_ >=30) )
+    assertEquals(Cons (10, Nil ()), filter[Int]( lst )(_ <= 10) )
+
   }
 
 

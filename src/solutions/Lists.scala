@@ -20,5 +20,9 @@ object Lists {
 
     def map[A,B](l: List[A])(mapper: A=>B): List[B] = flatMap(l)(value => Cons(mapper(value),Nil()))
 
+    def filter[A](l1: List[A])(pred: A=>Boolean): List[A] = flatMap(l1)( v => pred(v) match {
+      case true => Cons(v,Nil())
+      case _ => Nil()
+    })
   }
 }
