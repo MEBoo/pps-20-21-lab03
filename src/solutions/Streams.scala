@@ -22,7 +22,7 @@ object Streams {
 
     // 7
     def fibs: Stream[Int] = {
-      def _fibs(h: Int, n: Int): Stream[Int] = Cons(()=>h,()=>_fibs(n, h + n))
+      def _fibs(p: Int, n: Int): Stream[Int] = Cons(()=>p,()=>_fibs(n, p + n))
       _fibs(0, 1)
     }
 
