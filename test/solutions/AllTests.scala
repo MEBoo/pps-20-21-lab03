@@ -93,10 +93,12 @@ class AllTests {
 
   }
   import solutions.Streams.Stream.fibs
+  import solutions.Streams.Stream.fibsIterate
   
   @Test def testStreamFibs() {
 
     assertEquals( Cons(0, Cons(1, Cons(1, Cons(2, Cons(3, Cons(5, Cons(8, Cons(13, Nil ())))))))), Stream.toList( Stream.take( fibs )(8) ) )
+    assertEquals( Cons(0, Cons(1, Cons(1, Cons(2, Cons(3, Cons(5, Cons(8, Cons(13, Nil ())))))))), Stream.toList( Stream.take( fibsIterate )(8) ) )
 
   }
 

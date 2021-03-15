@@ -26,5 +26,6 @@ object Streams {
       _fibs(0, 1)
     }
 
+    def fibsIterate: Stream[Int] = map(iterate[(Int,Int)]((0,1))(pc=>(pc._2,pc._1+pc._2)))(a=>a._1)
   }
 }
